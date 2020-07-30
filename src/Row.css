@@ -32,7 +32,4 @@
 .Row__container{
     max-width: 95%;
     margin: 0 auto;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
   }
