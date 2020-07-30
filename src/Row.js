@@ -1,40 +1,36 @@
-import React, { useState,useEffect } from 'react'
-import instance from "./axios"
-import "./Row.css"
+import React, { useState, useEffect } from "react";
+import instance from "./axios";
+import "./Row.css";
 
-const baseUrl = "https://image.tmdb.org/t/p/original"
+const baseUrl = "https://image.tmdb.org/t/p/original";
 function Row(props) {
-    const [movies, setMovies] = useState([])
-    useEffect(() => {
-
-        async function fetchData(){
-            const request = await instance.get(props.fetchUrl)
-            setMovies(request.data.results)
-            return request  
-        }
-        fetchData()
-        // return () => {
-            // }
-        }, [props.fetchUrl])
-        console.table(movies)
-    return (
-        <div className="row">
-            <h1>{props.title}</h1>
-            <div className="row__posters">
-                {
-                    movies.map((movie,i) => {
-                      return (
-                        <div key={i}>
-                        <img
-                        className="row__poster"
-                        src={`${baseUrl}${movie.poster_path} `} alt={movie.name}/>
-                         </div>
-                      )
-                    })
-                }
-            </div>
-        </div>
-    )
+  const [movies, setMovies] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      const request = await instance.get(props.fetchUrl);
+      setMovies(request.data.results);
+      return request;
+    }
+    fetchData();
+    console.table(movies);
+  }, [props.fetchUrl]);
+  return (
+    <div className="row">
+      <h2 className="genre__heading">{props.title}</h2>
+      <div className="row__posters">
+        {movies.map((movie) => {
+          return (
+            <img
+              key={movie.id}
+              className={props.isVertical ? "row__poster--vertical" : "row__poster--horizontal"}
+              src={`${baseUrl}${props.isVertical ? movie.poster_path : movie.backdrop_path} `}
+              alt={movie.name}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
-export default Row
+export default Row;

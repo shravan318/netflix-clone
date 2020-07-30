@@ -1,14 +1,31 @@
 .row__posters {
     display: flex;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    overflow-y: hidden;
+    padding: 20px;
 }
-.row__poster {
+.row__posters::-webkit-scrollbar{
+    display: none;
+}
+.row__poster--vertical {
     float: left;
    max-width:  150px;
     object-fit: contain;
     padding: 0 5px;
   transition: transform 550ms;
-  z-index: -1;
 }
-.row__poster:hover {
+.row__poster--horizontal {
+    float: left;
+   max-width:  220px;
+    object-fit: contain;
+    padding: 0 5px;
+  transition: transform 550ms;
+}
+.row__poster--horizontal:hover,
+.row__poster--vertical:hover {
     transform: scale(1.1);
+}
+.genre__heading{
+    color: #fff;
 }
