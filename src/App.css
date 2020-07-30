@@ -1,10 +1,11 @@
 *{
   margin: 0;
 }
-.App__container{
-  max-width: 95%;
-  margin: 0 auto;
-}
 html,body{
   background-color: #141414;
+}
+.Row__wrapper{
+  width: 100%;
+  position: absolute;
+  top: 70%;
 }

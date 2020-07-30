@@ -1,0 +1,27 @@
+.banner__wrapper{
+    color: #fff;
+    object-fit: contain;
+    height: 680px;
+    position: relative;
+}
+.banner__contents{
+    position: absolute;
+    top: 26%;
+    left: 4%;
+    width: 36%;
+}
+.banner__title{
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 1rem;
+}
+.banner__description{
+    width: 45rem;
+    line-height: 1.3rem;
+    padding-top: 1rem;
+    font-size: 1rem;
+}
+.banner__button--white{
+    background-color: #fff;
+    padding: 1rem 2rem;
+}

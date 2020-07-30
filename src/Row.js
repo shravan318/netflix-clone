@@ -12,10 +12,9 @@ function Row(props) {
       return request;
     }
     fetchData();
-    console.table(movies);
   }, [props.fetchUrl]);
   return (
-    <div className="row">
+    <div className="Row__container">
       <h2 className="genre__heading">{props.title}</h2>
       <div className="row__posters">
         {movies.map((movie) => {
