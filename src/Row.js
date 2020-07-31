@@ -38,13 +38,11 @@ function Row(props) {
       movieTrailer(movie?.original_name || "")
         .then((url) => {
           const urlParams = new URLSearchParams(new URL(url).search);
-          console.log("urlParams", urlParams.get("v"));
           setTrailerUrl(urlParams.get("v"));
         })
         .catch((err) => console.log(err));
     }
   };
-  console.log("object", movie);
   return (
     <div className="Row__container">
       <h2 className="genre__heading">{props.title}</h2>
