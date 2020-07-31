@@ -16,6 +16,4 @@ const requests = {
     fetchNetflixTopWar: `/discover/tv?api_key=${APIkey}&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&with_genres=10768&with_networks=213&include_null_first_air_dates=false` ,
     fetchNetflixTopWestern: `/discover/tv?api_key=${APIkey}&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&with_genres=37&with_networks=213&include_null_first_air_dates=false` ,
 }
-
-
 export default requests

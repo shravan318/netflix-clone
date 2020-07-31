@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
-import movieTrailer from "movie-trailer";
+import movieTrailer from "./trailer";
 import instance from "./axios";
 import "./Row.css";
 
@@ -25,6 +25,7 @@ function Row(props) {
       autoplay: 1,
     },
   };
+
   const onHoverPlayVideo = (movie) => {
     console.log("MOVIE",movie)
     if (trailerUrl) {
@@ -33,9 +34,9 @@ function Row(props) {
       movieTrailer(movie?.original_name || "")
       .then((url) => {
         console.log("urlParams",movie)
-        // const urlParams = new URLSearchParams(new URL(url).search);
-        // console.log("urlParams",urlParams.get("v"))
-        // setTrailerUrl(urlParams.get("v"));
+        const urlParams = new URLSearchParams(new URL(url).search);
+        console.log("urlParams",urlParams.get("v"))
+        setTrailerUrl(urlParams.get("v"));
         })
         .catch((err) => console.log(err));
     }
