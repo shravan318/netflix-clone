@@ -1,5 +1,3 @@
-'use strict';
-
 ( function ( root, cx ) {
 
 	 if ( typeof exports === 'object' ) {

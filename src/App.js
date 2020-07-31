@@ -7,7 +7,6 @@ import Nav from "./Nav";
 import { rowData } from "./helper";
 
 function App() {
-  console.log("rowData", rowData);
   return (
     <div className="App__container">
       <Nav />
@@ -16,7 +15,7 @@ function App() {
         {Object.entries(rowData).map(([title, url]) => {
           return (
             <Row
-            key={title}
+             key={title}
               title={title}
               fetchUrl={requests[url]}
               // isVertical={true}

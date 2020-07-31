@@ -93,8 +93,7 @@ function Row(props) {
             <div className="trailer__genres">
               Genre :{" "}
               {movie?.genre_ids.map(id => {
-                return <span>{genre[id]}, {" "}</span>
-                
+                return <span key={id}>{genre[id]}, {" "}</span>
               })}
             </div>
           </div>
