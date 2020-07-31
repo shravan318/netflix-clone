@@ -36,6 +36,7 @@
 }
 .trailer__wrapper {
   color: #fff;
+  margin-bottom: 20px;
   position: relative;
   width: 100%;
   height: 70%;
@@ -66,6 +67,7 @@
   color: #fff;
   padding: 2% 3% 2% 3%;
   max-width: 40%;
+  position: relative;
 }
 .trailer__name {
   font-size: 3rem;
@@ -122,6 +124,17 @@
   height: 1rem;
   width: 1rem;
   margin-right: 5px;
+}
+.trailer__icon--close {
+  height: 1rem;
+  width: 1rem;
+ position: absolute;
+ top: 4%;
+ right: 4%;
+ height: 2rem;
+ width: 2rem;
+ z-index: 999;
+ cursor: pointer;
 }
 .trailer__description{
     margin-top: 2rem;

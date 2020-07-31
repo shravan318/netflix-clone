@@ -3,7 +3,7 @@ import YouTube from "react-youtube";
 import movieTrailer from "./trailer";
 import instance from "./axios";
 import { BsFillPlayFill } from "react-icons/bs";
-import { AiOutlineInfoCircle } from "react-icons/ai";
+import { AiOutlineInfoCircle,AiOutlineClose } from "react-icons/ai";
 import genre from "./genres";
 import "./Row.css";
 
@@ -101,6 +101,7 @@ function Row(props) {
             </div>
           </div>
           <div className="trailerVideo__wrapper">
+              <AiOutlineClose className="trailer__icon--close" onClick={()=>onHoverPlayVideo(movie)} />
             <YouTube videoId={trailerUrl} opts={opts} />
           </div>
         </div>
