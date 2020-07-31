@@ -14,7 +14,7 @@ function App() {
       <Row
         title="Netflix Originals"
         fetchUrl={requests.fetchNetflixOriginals}
-        isVertical={true}
+        // isVertical={true}
       />
       <Row title="Crime - Top Rated" fetchUrl={requests.fetchNetflixTopCrime} />
       <Row
