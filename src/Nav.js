@@ -4,21 +4,23 @@ import "./nav.css";
 
 function Nav() {
   const [show, navBG] = useState(false);
-    useEffect(()=>{
-        window.addEventListener("scroll", ()=>{
-            if(window.scrollY > 100){
-                navBG(true)
-            }else navBG(false)
-        })
-    },[])
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        navBG(true);
+      } else navBG(false);
+    });
+  }, []);
   return (
     <nav className={show === true ? "nav__wrapper--bg" : "nav__wrapper"}>
       <div className="nav__left">
-        <img
-          src="https://logos-download.com/wp-content/uploads/2016/03/Netflix_logo.png"
-          alt="logo"
-          className="nav__logo"
-        />
+        <a href="/">
+          <img
+            src="https://logos-download.com/wp-content/uploads/2016/03/Netflix_logo.png"
+            alt="logo"
+            className="nav__logo"
+          />
+        </a>
       </div>
       <div className="nav__right">
         <img
