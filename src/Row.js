@@ -22,7 +22,7 @@ function Row(props) {
     fetchData();
   }, [props.fetchUrl]);
   const opts = {
-    height: "650",
+    height: "600",
     width: "1000",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
